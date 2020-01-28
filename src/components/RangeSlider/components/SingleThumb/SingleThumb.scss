@@ -141,11 +141,7 @@ $range-thumb-shadow-focus: var(
 
   &:active {
     @include range-thumb-selectors {
-      transform: scale(1.5);
-
-      @include rangeSliderThumbPosition(
-        var(--p-range-slider-thumb-size-active, $range-thumb-size)
-      );
+      transform: scale(var(--p-range-slider-thumb-scale, 1));
     }
   }
 
