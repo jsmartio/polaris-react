@@ -2,6 +2,7 @@ import React from 'react';
 import {InlineError} from 'components';
 // eslint-disable-next-line no-restricted-imports
 import {mountWithAppProvider, ReactWrapper} from 'test-utilities/legacy';
+import {mountWithApp} from 'test-utilities';
 import {Select} from '../Select';
 
 describe('<Select />', () => {
@@ -332,6 +333,32 @@ describe('<Select />', () => {
       );
 
       expect(select.find(InlineError)).toHaveLength(0);
+    });
+  });
+
+  describe('globalTheming', () => {
+    it('adds a global theming class when global theming is enabled', () => {
+      const select = mountWithApp(
+        <Select label="Select" options={[]} onChange={noop} />,
+        {
+          features: {unstableGlobalTheming: true},
+        },
+      );
+      expect(select).toContainReactComponent('div', {
+        className: 'Select globalTheming',
+      });
+    });
+
+    it('does not add a global theming class when global theming is disabled', () => {
+      const select = mountWithApp(
+        <Select label="Select" options={[]} onChange={noop} />,
+        {
+          features: {unstableGlobalTheming: false},
+        },
+      );
+      expect(select).not.toContainReactComponent('div', {
+        className: 'Select globalTheming',
+      });
     });
   });
 });

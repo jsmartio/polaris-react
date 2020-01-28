@@ -1,6 +1,7 @@
 import React from 'react';
 import {ArrowUpDownMinor} from '@shopify/polaris-icons';
 import {classNames} from '../../utilities/css';
+import {useFeatures} from '../../utilities/features';
 import {useUniqueId} from '../../utilities/unique-id';
 import {Labelled, LabelledProps, helpTextID} from '../Labelled';
 import {Icon} from '../Icon';
@@ -88,13 +89,14 @@ export function Select({
   onBlur,
 }: SelectProps) {
   const id = useUniqueId('Select', idProp);
-
   const labelHidden = labelInline ? true : labelHiddenProp;
+  const {unstableGlobalTheming = false} = useFeatures();
 
   const className = classNames(
     styles.Select,
     error && styles.error,
     disabled && styles.disabled,
+    unstableGlobalTheming && styles.globalTheming,
   );
 
   const handleChange = onChange
