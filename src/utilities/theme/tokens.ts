@@ -42,7 +42,6 @@ const Overrides = {
   ease: 'cubic-bezier(0.4, 0.22, 0.28, 1)',
   rangeSliderThumbSizeBase: rem('16px'),
   rangeSliderThumbSizeActive: rem('24px'),
-  rangeSliderThumbOffset: rem('-4px'),
 };
 
 export const Tokens = {

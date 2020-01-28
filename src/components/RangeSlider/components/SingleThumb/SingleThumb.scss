@@ -115,7 +115,7 @@ $range-thumb-shadow-focus: var(
     );
     box-shadow: $range-thumb-shadow;
     appearance: none;
-    transition-property: border-color, box-shadow, width, height, margin-top;
+    transition-property: border-color, box-shadow, margin-top, transform;
     transition-duration: duration();
     transition-timing-function: easing();
 
@@ -141,8 +141,7 @@ $range-thumb-shadow-focus: var(
 
   &:active {
     @include range-thumb-selectors {
-      width: var(--p-range-slider-thumb-size-active, $range-thumb-size);
-      height: var(--p-range-slider-thumb-size-active, $range-thumb-size);
+      transform: scale(1.5);
 
       @include rangeSliderThumbPosition(
         var(--p-range-slider-thumb-size-active, $range-thumb-size)

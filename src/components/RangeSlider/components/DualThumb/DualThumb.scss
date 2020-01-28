@@ -106,7 +106,7 @@ $range-thumb-shadow-focus: var(
 
   // stylelint-disable-next-line value-no-vendor-prefix
   cursor: -webkit-grab;
-  transition-property: width, height, margin;
+  transition-property: transform, margin;
   transition-duration: duration();
   transition-timing-function: easing();
 
@@ -121,9 +121,7 @@ $range-thumb-shadow-focus: var(
   }
 
   &:active {
-    margin-left: var(--p-range-slider-thumb-offset);
-    width: var(--p-range-slider-thumb-size-active, $range-thumb-size);
-    height: var(--p-range-slider-thumb-size-active, $range-thumb-size);
+    transform: scale(1.5);
   }
 
   &:focus {
