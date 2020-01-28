@@ -92,6 +92,7 @@ $range-thumb-shadow-focus: var(
 .Thumbs {
   position: absolute;
   z-index: z-index('input', $stacking-order);
+  padding: 0;
   width: $range-thumb-size;
   height: $range-thumb-size;
   border-radius: 50%;
