@@ -249,7 +249,7 @@
     &.destructive {
       background: transparent;
       box-shadow: 0 0 0 border-width('base') var(--p-border-critical);
-      color: var(--p-critical-link);
+      color: var(--p-link-critical);
       @include recolor-icon(var(--p-icon-critical));
 
       &:hover {

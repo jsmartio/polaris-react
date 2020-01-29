@@ -180,7 +180,7 @@ $stacking-order: (
   @include recolor-icon(color('white'));
 
   &.globalTheming {
-    @include recolor-icon(var(--p-button-text));
+    @include recolor-icon(var(--p-icon-on-primary));
   }
 
   &.disabled {
