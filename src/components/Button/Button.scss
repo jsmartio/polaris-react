@@ -179,7 +179,7 @@ $stacking-order: (
   @include button-filled(color('indigo'), color('indigo', 'dark'));
   @include recolor-icon(color('white'));
 
-  &.globalTheming {
+  &.newDesignLanguage {
     @include recolor-icon(var(--p-button-text));
   }
 
@@ -218,7 +218,7 @@ $stacking-order: (
     );
   }
 
-  &.globalTheming {
+  &.newDesignLanguage {
     @include recolor-icon(var(--p-button-text));
   }
 }
@@ -255,7 +255,7 @@ $stacking-order: (
 }
 
 .loading,
-.globalTheming.loading {
+.newDesignLanguage.loading {
   position: relative;
   transition: border-color duration() easing();
 
@@ -397,7 +397,7 @@ $stacking-order: (
   }
 
   // stylelint-disable selector-max-class
-  &.globalTheming {
+  &.newDesignLanguage {
     // redeclaring these styles here for specificity
     background: transparent;
     border: 0;
@@ -640,7 +640,7 @@ $stacking-order: (
       }
     }
 
-    &.globalTheming {
+    &.newDesignLanguage {
       box-shadow: 0 0 0 border-width('base') currentColor;
 
       &:focus {
@@ -684,7 +684,7 @@ $stacking-order: (
     z-index: z-index(focused, $stacking-order);
   }
 
-  &.globalTheming {
+  &.newDesignLanguage {
     margin-left: rem(1px);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
