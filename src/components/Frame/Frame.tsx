@@ -186,7 +186,7 @@ class FrameInner extends React.PureComponent<CombinedProps, State> {
       <CSSAnimation
         in={showContextualSaveBar}
         className={contextualSaveBarClassName}
-        type="fade"
+        type={unstableGlobalTheming ? 'fadeUp' : 'fade'}
       >
         <ContextualSaveBar {...this.contextualSaveBar} />
       </CSSAnimation>
