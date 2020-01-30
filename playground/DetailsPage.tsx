@@ -340,7 +340,11 @@ export function DetailsPage() {
         <Layout.Section>
           <Card sectioned>
             <FormLayout>
-              <TextField label="Title" value="M60-A" onChange={() => {}} />
+              <TextField
+                label="Title"
+                value="M60-A"
+                onChange={() => setIsDirty(true)}
+              />
               <TextField
                 label="Description"
                 value={DescriptionValue}
